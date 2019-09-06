@@ -1,0 +1,42 @@
+.material-icons.md-18 {
+    font-size: 18px;
+}
+
+.material-icons.md-24 {
+    font-size: 24px;
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+}
+
+.material-icons.md-48 {
+    font-size: 48px;
+}
+
+.material-icons.md-60 {
+    font-size: 60px;
+}
+
+.material-icons.md-140 {
+    font-size: 140px;
+}
+
+div.thumbnail {
+    background-color: rgb(27, 38, 49, 0.1);
+}
+
+a.back-home {
+    color: rgb(240, 1, 1);
+    text-decoration: underline;
+}
+
+a.back-home:hover {
+    color: rgb(190, 1, 1);
+}
+
+.image_box {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
