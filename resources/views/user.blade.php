@@ -10,8 +10,6 @@
                         <div style="float: right;position:absolute;right:5px;top:0px;z-index:999;text-align:center;"><a href="#" data-toggle="modal" data-target="#addUser"><i class="material-icons md-48" style="vertical-align:middle;;">add_circle</i><p>เพิ่มผู้ใช้งาน</p></a></div>
                     </div>
                     
-                    <form method="POST" action="{{ route('register') }}">
-                    @csrf
                     <!-- Modal -->
                     <div class="modal fade" id="addUser" tabindex="-1" role="dialog" aria-labelledby="addUserTitle" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -23,6 +21,8 @@
                                     </button>
                                 </div>
                                 
+                                <form method="POST" action="{{ route('register') }}">
+                                @csrf
                                 <div class="modal-body">
                                     {{-- Text input--}}
                                     <label for="name">{{ __('Username') }}</label>
@@ -99,10 +99,10 @@
                                     <button type="button" class="btn btn-danger" data-dismiss="modal">ปิด</button>
                                     <button type="submit" class="btn btn-primary">{{ __('บันทึก') }}</button>
                                 </div>
+                                </form>
                             </div>
                         </div>
                     </div>
-                    </form>
 
                     <div class="card-body">
                         @if (session('status'))
@@ -116,4 +116,11 @@
             </div>
         </div>
     </div>
+    @if( $errors->isNotEmpty() )
+  <script>
+    $(function () {
+       $('#addUser').modal('show')
+    })
+  </script>
+@endif
 @endsection

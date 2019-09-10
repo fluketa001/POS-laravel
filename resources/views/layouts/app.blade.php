@@ -27,6 +27,7 @@
 </head>
 <body>
     <div id="app">
+    @include('flash-message')
         <nav class="navbar navbar-expand-md navbar-dark bg-primary shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/home') }}">

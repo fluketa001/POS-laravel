@@ -14,9 +14,11 @@
 Route::get('/', function () {
     return redirect('/home');
     //return view('auth.login');
-});
+});//->middleware('verified');
 
-Auth::routes();
+Auth::routes(['verify' => true]); //'register' => false
+
+//Route::post('/register', 'RegisterController@register')->name('register');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/company','HomeController@company')->name('company');
